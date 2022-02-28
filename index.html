@@ -5,5 +5,147 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>PCAP</title>
-	<meta http-equiv='refresh' content='0; URL=./tak.php'>
 </head>
+<body>
+	<p class="singularo_scripto">dict = {	#	<key>:<value>,
+<br>	"brand": "Ford",
+<br>	"model": "Mustang",
+<br>	"year": 1964
+<br>}
+<br>
+<br>print(dict)
+<br>
+<br>x = dict.copy()	#	kopiuje słownik do innego słownika
+<br>print(x)
+<br>
+<br>x.clear() #	czyści słownik
+<br>print(x)
+<br>
+<br>a = dict.get("brand") #	gets the value of given key
+<br>print(a)
+<br>
+<br>a = dict.items() #	daje wszyskie pary klucz:wartość
+<br>print(a)
+<br>
+<br>dict["year"] = 2005	#	1 sposób nadpisywania donych w słowniku
+<br>dict["color"] = "white" #	również można urzywać by dodawać nowe elementy
+<br>print(dict)
+<br>
+<br>a = dict.keys() #	daje wszystnie klucze ze słownika
+<br>print(a)
+<br>a = dict.values() #	daje wszystnie wartości ze słownika
+<br>print(a)
+<br>
+<br>dict.pop("color") #	usówa parę(item) ze słownika, po kluczu
+<br>print(dict)
+<br>
+<br>dict.popitem()	#	usówa ostatnio dodany element ze słownika
+<br>print(dict)
+<br>
+<br>dict.update({"year":"2137"})	#	dodaje nową parę na końcu słownika
+<br>print(dict)<br></p><p class="singularo_scripto">def def_para(name = "illy"):	#	domyślny parametr
+<br>	print(f"the name is {name}")
+<br>
+<br>def is_odd(num):
+<br>	if(num%2 == 1):
+<br>		return True	#	zwracanie wartości
+<br>	else:
+<br>		return False
+<br>
+<br>def pass_to_f(name):	#	odbieranie przekazywanej funkcjii
+<br>	the_num = 43
+<br>	print(f"hello {name}")
+<br>	if(is_odd(the_num)):
+<br>		print(f"{the_num} is odd")
+<br>	def_para()
+<br>
+<br>
+<br>def say_hello(): #	najprościej funkcja
+<br>	print("hello world !!")
+<br>	pass_to_f("Jane")	#	przekazwyanie zmiennej do funkcji
+<br>
+<br>say_hello()
+<br>
+<br>#	czytaj z dołu do góry<br></p><p class="singularo_scripto">testTuple = ("apple", "pear", "orange", "banana", "cherry", 1, 22, 443, 200, True, False)	# krotka może składać się ze wszystkiego
+<br>#				0 		1		2  			3  		 4    	5	6	7	 8	  9		 10
+<br>one_element_tuple = ("element",)
+<br>print(testTuple)
+<br>print(type(one_element_tuple))
+<br>
+<br>amount = len(testTuple)	#	ilość elementów w krotce
+<br>print(f"there is {amount} elements in tuple")
+<br>
+<br>for i in range(amount):
+<br>	print(testTuple[i])	#	pokazuje element krotki na [i] pozycji 0-niskonczonoś
+<br>print(testTuple[-1])	# 	pokazuje ostani element krotki
+<br>print(testTuple[3:5])	#	pokazuje elementy w zakresie 3:5 czyli elementy 3 i 4
+<br>print(testTuple[:4])	#	pokazuje elementy w zakresie od początku do 4 czyli 0
+<br>print(testTuple[5:])	#	pokazuje elementy w zakresie od 5 pozycji do końca
+<br>
+<br>#	!!!	do krotki nie można dopisywać nowych elementów ale są sposoby bo to zrobić	!!!
+<br>
+<br>#	nadpisywanie elemenów poniżej
+<br>tmpList = list(testTuple)
+<br>tmpList[1] = "kiwi"
+<br>testTuple = tuple(tmpList)
+<br>print(testTuple)
+<br>
+<br>#	dopisywanie elemenów poniżej
+<br>tmpList = list(testTuple)
+<br>tmpList.append("tea4two")
+<br>testTuple = tuple(tmpList)
+<br>print(testTuple)
+<br>
+<br>(var0, var1, var2, *var3) = testTuple # nadawanie zmiennym (lub listom ostatni przykład) wartości z krotki (* oznacza że przypisać wszystkie pozostałe warości do listy ja będzei w środku to przyjmuje wszyskie wartości ale zostawia pojedyncze elementy dla pozostałych zmiennych)
+<br>
+<br>
+<br>print(f"\n{var0}\n{var1}\n{var2}\n{var3}")
+<br>
+<br>enormous_tuple = testTuple + one_element_tuple # łączenie krotek
+<br>print(enormous_tuple)
+<br>
+<br>
+<br>del testTuple # usuwa krotkę<br></p><p class="singularo_scripto">testList = ["potato", "carrot", "cabbage", "tomato", "brocoly", "ass"]
+<br>#				0 		1		 	2  		  3  		 4    	  5
+<br>testList1 = ["orange", "appel", "pear", True, 1, 2, 3, True, False]	# lista może składać się ze wszystkiego
+<br>print(f"eat healthy {testList}")
+<br>strList = testList.copy()	# kopiuje listę do innych list
+<br>strList = list(testList)	# kopiuje listę do innych list
+<br>amount = len(testList)
+<br>print(f"amount of healthy stuff = {amount}")
+<br>
+<br>print(type(testList))#	ilość elementów w liście
+<br>
+<br>for i in range(amount):
+<br>	print(testList[i])	#	pokazuje element listy na [i] pozycji 0-niskonczonoś
+<br>print(testList[-1])	# 	pokazuje ostani element listy
+<br>print(testList[3:5])	#	pokazuje elementy w zakresie 3:5 czyli elementy 3 i 4
+<br>print(testList[:4])	#	pokazuje elementy w zakresie od początku do 4 czyli 0
+<br>print(testList[5:])	#	pokazuje elementy w zakresie od 5 pozycji do końca
+<br>
+<br>testList[0] = "patata" # nadpisuje element listy print(testList)
+<br>testList.insert(4, "salad")	# wpycha na pozycję 4 element przesówając każde kolejne o jedną pozycję na liście
+<br>print(testList)
+<br>
+<br>testList.append("watermelon")	#	dopisuje na ostatnim miejscu nowy element listy
+<br>print(testList)
+<br>
+<br>testList.extend(testList1)	#	dodaje do testList testList1
+<br>print(testList)
+<br>
+<br>#	usówa elementy listy
+<br>testList.remove("appel")	#	po wartoścki, jeżeli się powtażają to usówa pierwszy element jaki jest
+<br>testList.remove(True)	#	po wartoścki, jeżeli się powtażają to usówa pierwszy element jaki jest
+<br>testList.pop(1)	#	po indexie
+<br>del testList[0]	#	po indexie
+<br>print(testList)
+<br>
+<br>strList.sort() #	sortuje listę !!!tylko str bez int lub bool!!!
+<br>print(strList)
+<br>
+<br>
+<br>testList.clear() #	czyści listę
+<br>del testList #	usówa całkowicie listę<br></p>
+
+
+</body>

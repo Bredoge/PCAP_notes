@@ -1,0 +1,24 @@
+body{
+	background-color: lightblue;
+	margin: 0px;
+}
+
+p.singularo_scripto{
+	padding: 10px;
+	margin: 10px 20px 40px 20px;
+	background-color: lightgrey;
+	border: solid black 2px;
+	font-family: monospace;
+}
+
+div.title{
+	margin: 20px 20px 10px 20px;
+	font-size: 30px;
+}
+
+header{
+	background-color: #3F587B;
+	font-size: 40px;
+	text-align: center;
+	padding: 10px;
+}
